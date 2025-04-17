@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .bg-soft-gradient {
+    background: linear-gradient(-45deg, #daa4b4aa, #e0ececaa, #d8b4feaa);
+    background-size: cover;
+  }
+
+  .floating-shape-slow {
+    animation: float-slow 25s ease-in-out infinite;
+  }
+
+  @keyframes float-slow {
+    0%,
+    100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-10px) rotate(180deg);
+    }
+  }
+}
